@@ -1,6 +1,9 @@
 const http = require('http');
 const htmlHandler = require('./htmlResponses.js');
 const textHandler = require('./textResponses.js');
+const jsonHandler = require('./jsonResponses.js');
+const imageHandler = require('./imageResponses.js');
+const process = require('process');
 
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
@@ -29,6 +32,10 @@ const onRequest = (request, response) => {
         case '/dankmemes':
             imageHandler.getDankMemes(request, response);
             break;
+        case '/favicon.ico': 
+            response.writeHead(204); 
+            response.end();
+            break;
         default:
             htmlHandler.getIndex(request, response);
             break;
@@ -38,4 +45,3 @@ const onRequest = (request, response) => {
 http.createServer(onRequest).listen(port, () => {
     console.log(`Listening on ${port}`);
 });
-
