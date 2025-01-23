@@ -1,6 +1,5 @@
 const fs = require('fs');
-const path = require('path');
-const __dirname = path.resolve();
+//const path = require('path');
 
 const index = fs.readFileSync(`${__dirname}/../client/client.html`);
 const page2 = fs.readFileSync(`${__dirname}/../client/client2.html`);

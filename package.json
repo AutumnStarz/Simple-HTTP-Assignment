@@ -2,6 +2,7 @@
   "name": "simple-http-assignment",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node ./src/server.js",
     "pretest": "eslint ./src --fix",

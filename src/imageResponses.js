@@ -1,5 +1,4 @@
-const path = require('path');
-const __dirname = path.resolve();
+//const path = require('path');
 const fs = require('fs');
 
 const spongegar = fs.readFileSync(`${__dirname}/../client/spongegar.png`);
